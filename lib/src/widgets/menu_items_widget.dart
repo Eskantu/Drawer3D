@@ -20,7 +20,7 @@ class MenuItems extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             onTap: () {
-              Navigator.pushNamed(context, 'home');
+              Navigator.pushReplacementNamed(context, 'home');
             },
           ),
           ListTile(
@@ -33,7 +33,7 @@ class MenuItems extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
             onTap: () {
-              Navigator.pushNamed(context, 'page2');
+              Navigator.pushReplacementNamed(context, 'page2');
             },
           ),
           ListTile(
