@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
             const  Text('Swipe right to see the menu'),
               ElevatedButton(
                 onPressed: () {},
-                child: Text('Press me'),
+                child:const Text('Press me'),
               )
             ],
           ),

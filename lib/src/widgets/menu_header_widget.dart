@@ -8,7 +8,7 @@ class MenuHeader extends StatelessWidget {
     return DrawerHeader(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const[
           CircleAvatar(
             radius: 50,
             backgroundImage:

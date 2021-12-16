@@ -16,7 +16,7 @@ class MenuItems extends StatelessWidget {
               color: Colors.white,
             ),
             title: Text(
-              'Home',
+              'Inicio',
               style: TextStyle(color: Colors.white),
             ),
             onTap: () {
@@ -53,7 +53,7 @@ class MenuItems extends StatelessWidget {
               color: Colors.white,
             ),
             title: Text(
-              'Settings',
+              'Configuraciones',
               style: TextStyle(color: Colors.white),
             ),
             onTap: () {},

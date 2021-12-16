@@ -4,10 +4,9 @@ import 'package:drawer_animation/src/widgets/menu_header_widget.dart';
 import 'package:drawer_animation/src/widgets/menu_items_widget.dart';
 import 'package:flutter/material.dart';
 
-
 class MainPage extends StatefulWidget {
-  const MainPage({ Key? key, required this.pageWidget }) : super(key: key);
- final Widget pageWidget;
+  const MainPage({Key? key, required this.pageWidget}) : super(key: key);
+  final Widget pageWidget;
   @override
   _MainPageState createState() => _MainPageState();
 }
@@ -34,11 +33,11 @@ class _MainPageState extends State<MainPage> {
           SafeArea(
             child: Container(
               width: 200,
-              padding: EdgeInsets.all(8),
+              padding:const EdgeInsets.all(8),
               child: Column(
-                children:const [
-                MenuHeader(),
-                MenuItems(),
+                children: const [
+                  MenuHeader(),
+                  MenuItems(),
                 ],
               ),
             ),
@@ -46,7 +45,7 @@ class _MainPageState extends State<MainPage> {
           TweenAnimationBuilder(
               curve: Curves.easeInExpo,
               tween: Tween<double>(end: value, begin: 0),
-              duration: Duration(milliseconds: 500),
+              duration:const Duration(milliseconds: 500),
               builder: (_, double val, __) {
                 return Transform(
                   alignment: Alignment.center,
@@ -54,7 +53,24 @@ class _MainPageState extends State<MainPage> {
                     ..setEntry(3, 2, 0.001)
                     ..setEntry(0, 3, 200 * val)
                     ..rotateY((pi / 6) * val),
-                  child:widget.pageWidget,
+                  child: Stack(
+                    children: [
+                      widget.pageWidget,
+                      SafeArea(
+                        child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              value = value==1?0:1;
+                            });
+                          },
+                          icon:const Icon(
+                            Icons.menu,
+                            color: Colors.black,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 );
               }),
           GestureDetector(
