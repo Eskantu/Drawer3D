@@ -67,7 +67,9 @@ class MenuItems extends StatelessWidget {
               'Salir',
               style: TextStyle(color: Colors.white),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushReplacementNamed(context, 'login');
+            },
           ),
         ],
       ),
