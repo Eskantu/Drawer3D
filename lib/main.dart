@@ -2,6 +2,7 @@
 
 
 import 'package:drawer_animation/src/pages/home_page.dart';
+import 'package:drawer_animation/src/pages/login_page.dart';
 import 'package:drawer_animation/src/pages/main_page.dart';
 import 'package:drawer_animation/src/pages/page2_page.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: 'home',
+      initialRoute: 'login',
       routes: {
+        'login': (BuildContext context) => LoginPage(),
         'home': (BuildContext context) => MainPage(pageWidget: Home(),),
         'page2': (BuildContext context) => MainPage(pageWidget: Page2Screen(),),
       },
