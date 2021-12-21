@@ -52,7 +52,7 @@ class _CategoriasState extends State<Categorias> {
               style: TextStyle(fontWeight: FontWeight.bold, color: selectedIndex==index? KTextColor: KTextLightColor),
             ),
             Container(
-              margin: EdgeInsets.only( top: KDefaultPadding / 4),
+              margin: EdgeInsets.only( top: KDefaultPadding / 5),
               height: 2,
               width: 30,
               color:selectedIndex==index? Colors.black: Colors.transparent,
