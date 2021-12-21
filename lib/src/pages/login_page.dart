@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -60,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
               _buildTextField(
                 hintText: 'Enter your e mail',
                 obscureText: false,
-                prefixIcon: Icon(
+                prefixIcon:const Icon(
                   Icons.mail,
                   color: Colors.white,
                 ),
@@ -85,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
               _buildTextField(
                 hintText: 'Enter your password',
                 obscureText: true,
-                prefixIcon: Icon(
+                prefixIcon:const Icon(
                   Icons.lock,
                   color: Colors.white,
                 ),
@@ -283,7 +285,7 @@ class _LoginPageState extends State<LoginPage> {
           border: InputBorder.none,
           
           filled: true,
-          fillColor: Color(0xFF5180ff),
+          fillColor:const Color(0xFF5180ff),
           prefixIcon: prefixIcon,
           hintText: hintText,
           hintStyle: const TextStyle(

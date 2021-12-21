@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      body: BodyWidget(),
+      body:const BodyWidget(),
     );
   }
 
@@ -19,20 +19,20 @@ class Home extends StatelessWidget {
       elevation: 0,
       actions: [
         IconButton(
-          icon: Icon(
+          icon:const Icon(
             Icons.search,
             color: Colors.black,
           ),
           onPressed: () {},
         ),
         IconButton(
-          icon: Icon(
+          icon:const Icon(
             Icons.shopping_cart,
             color: Colors.black,
           ),
           onPressed: () {},
         ),
-        SizedBox(width: KDefaultPadding / 2),
+      const  SizedBox(width: KDefaultPadding / 2),
       ],
     );
   }

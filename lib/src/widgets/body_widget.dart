@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'categorias.dart';
 
 class BodyWidget extends StatefulWidget {
+  const BodyWidget({Key? key}) : super(key: key);
+
   @override
   State<BodyWidget> createState() => _BodyWidgetState();
 }
@@ -17,7 +19,6 @@ class _BodyWidgetState extends State<BodyWidget> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _scrollController = ScrollController() //keepScrollOffset: false removed
       ..addListener(() {
@@ -49,14 +50,14 @@ class _BodyWidgetState extends State<BodyWidget> {
                 .copyWith(fontWeight: FontWeight.bold),
           ),
         ),
-        Categorias(),
+        const Categorias(),
         Expanded(
             child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: KDefaultPadding),
           child: GridView.builder(
             controller: _scrollController,
             itemCount: products.length,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: KDefaultPadding,
               mainAxisSpacing: KDefaultPadding,

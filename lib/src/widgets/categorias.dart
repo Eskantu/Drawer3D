@@ -2,7 +2,7 @@ import 'package:drawer_animation/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class Categorias extends StatefulWidget {
-  Categorias({Key? key}) : super(key: key);
+  const Categorias({Key? key}) : super(key: key);
 
   @override
   _CategoriasState createState() => _CategoriasState();
@@ -52,7 +52,7 @@ class _CategoriasState extends State<Categorias> {
               style: TextStyle(fontWeight: FontWeight.bold, color: selectedIndex==index? KTextColor: KTextLightColor),
             ),
             Container(
-              margin: EdgeInsets.only( top: KDefaultPadding / 5),
+              margin:const EdgeInsets.only( top: KDefaultPadding / 5),
               height: 2,
               width: 30,
               color:selectedIndex==index? Colors.black: Colors.transparent,
