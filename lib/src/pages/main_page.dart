@@ -73,19 +73,19 @@ class _MainPageState extends State<MainPage> {
                   ),
                 );
               }),
-          GestureDetector(
-            onHorizontalDragUpdate: (details) {
-              if (details.delta.dx > 0) {
-                setState(() {
-                  value = 1;
-                });
-              } else {
-                setState(() {
-                  value = 0;
-                });
-              }
-            },
-          )
+          // GestureDetector(
+          //   onHorizontalDragUpdate: (details) {
+          //     if (details.delta.dx > 0) {
+          //       setState(() {
+          //         value = 1;
+          //       });
+          //     } else {
+          //       setState(() {
+          //         value = 0;
+          //       });
+          //     }
+          //   },
+          // )
         ],
       ),
     );
