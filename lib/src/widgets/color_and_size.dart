@@ -20,6 +20,7 @@ class ColorAndSize extends StatelessWidget {
             children: [
               const Text('Color'),
               Row(
+                // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   const ColorDot(
                     color: Color(0XFF356C95),
@@ -42,7 +43,7 @@ class ColorAndSize extends StatelessWidget {
           child: RichText(
             text: TextSpan(
               children: [
-                TextSpan(
+                const TextSpan(
                     text: 'Size\n',
                     style: TextStyle(color: KTextColor)),
                 TextSpan(

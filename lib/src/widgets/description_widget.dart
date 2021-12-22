@@ -18,7 +18,7 @@ class Description extends StatelessWidget {
             vertical: KDefaultPadding),
         child: Text(
           product.description,
-          style: TextStyle(height: 1.5),
+          style:const TextStyle(height: 1.5),
         ));
   }
 }
