@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 
+import 'package:drawer_animation/src/pages/details_page.dart';
 import 'package:drawer_animation/src/pages/home_page.dart';
 import 'package:drawer_animation/src/pages/login_page.dart';
 import 'package:drawer_animation/src/pages/main_page.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         'login': (BuildContext context) => LoginPage(),
         'home': (BuildContext context) => MainPage(pageWidget: Home(),),
         'page2': (BuildContext context) => MainPage(pageWidget: Page2Screen(),),
+        'prodcut/details': (BuildContext context) => DetailsPage(),
       },
     );
   }

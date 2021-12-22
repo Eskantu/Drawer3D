@@ -65,7 +65,9 @@ class _BodyWidgetState extends State<BodyWidget> {
             ),
             itemBuilder: (context, index) => ItemCard(
               product: products[index],
-              onPress: () {},
+              onPress: () {
+                Navigator.pushNamed(context, 'prodcut/details',arguments: products[index]);
+              },
             ),
           ),
         ))
