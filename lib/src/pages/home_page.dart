@@ -10,6 +10,11 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: _appBar(),
       body:const BodyWidget(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.qr_code_scanner),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 
