@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
       body:const BodyWidget(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.qr_code_scanner),
+        child:const Icon(Icons.qr_code_scanner),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );

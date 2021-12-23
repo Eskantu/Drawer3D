@@ -25,16 +25,40 @@ class MenuItems extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(
-              Icons.shop,
+              Icons.inventory_rounded,
               color: Colors.white,
             ),
             title: Text(
-              'Mis Compras',
+              'Almacen',
               style: TextStyle(color: Colors.white),
             ),
             onTap: () {
-              Navigator.pushReplacementNamed(context, 'page2');
+              Navigator.pushReplacementNamed(context, 'Almacen');
             },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.show_chart,
+              color: Colors.white,
+            ),
+            title: Text(
+              'Mis ventas',
+              style: TextStyle(color: Colors.white),
+            ),
+            onTap: () {
+            
+            },
+          ),
+            ListTile(
+            leading: Icon(
+              Icons.qr_code_2,
+              color: Colors.white,
+            ),
+            title: Text(
+              'Codigos',
+              style: TextStyle(color: Colors.white),
+            ),
+            onTap: () {},
           ),
           ListTile(
             leading: Icon(
@@ -47,6 +71,7 @@ class MenuItems extends StatelessWidget {
             ),
             onTap: () {},
           ),
+         
           ListTile(
             leading: Icon(
               Icons.settings,

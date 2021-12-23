@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         'login': (BuildContext context) => LoginPage(),
         'home': (BuildContext context) => MainPage(pageWidget: Home(),),
-        'page2': (BuildContext context) => MainPage(pageWidget: Page2Screen(),),
+        'Almacen': (BuildContext context) => MainPage(pageWidget: Page2Screen(),),
         'prodcut/details': (BuildContext context) => DetailsPage(),
       },
     );
