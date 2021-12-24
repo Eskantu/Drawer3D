@@ -19,7 +19,7 @@ class AddToCart extends StatelessWidget {
           vertical: KDefaultPadding),
       child: Row(children: [
         Container(
-          margin: EdgeInsets.only(right: KDefaultPadding),
+          margin: const EdgeInsets.only(right: KDefaultPadding),
           width: 50,
           height: 50,
           decoration: BoxDecoration(
@@ -45,7 +45,7 @@ class AddToCart extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 'Buy now'.toUpperCase(),
-                style: TextStyle(
+                style:const TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold, color: Colors.white),
               ),

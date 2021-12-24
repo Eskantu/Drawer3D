@@ -8,7 +8,7 @@ class Page2Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(),
-      body: InventoryMenu(),
+      body: const InventoryMenu(),
     );
   }
 
@@ -49,7 +49,7 @@ class InventoryMenu extends StatelessWidget {
       //     ],
       //   ),
       // ),
-      padding:const EdgeInsets.all(KDefaultPadding),
+      padding: const EdgeInsets.all(KDefaultPadding),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -74,7 +74,7 @@ class InventoryMenu extends StatelessWidget {
   _buildCard({required String text, required IconData icon}) {
     return GestureDetector(
       onTap: () {
-        print('Card tapped');
+        // print('Card tapped');
       },
       child: Container(
         decoration: const BoxDecoration(
@@ -95,14 +95,14 @@ class InventoryMenu extends StatelessWidget {
               padding: const EdgeInsets.only(top: KDefaultPadding / 2),
               child: Text(
                 text,
-                style: TextStyle(
+                style: const TextStyle(
                   color: KTextLightColor,
                   fontSize: 20,
                   fontFamily: 'PTSans',
                 ),
               ),
             ),
-            SizedBox(height: KDefaultPadding / 2),
+            const SizedBox(height: KDefaultPadding / 2),
             Icon(
               icon,
               size: 40,

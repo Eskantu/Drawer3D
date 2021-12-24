@@ -12,12 +12,12 @@ class CounterWithLikeButton extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children:  [
-        CartCounter(),
+       const CartCounter(),
         Container(
-          padding: EdgeInsets.all(8),
+          padding:const EdgeInsets.all(8),
           height: 32,
           width: 32,
-          decoration: BoxDecoration(
+          decoration:const BoxDecoration(
             color: Color(0XFFFF6464),
             shape: BoxShape.circle
           ),
