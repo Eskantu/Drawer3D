@@ -1,4 +1,4 @@
-import 'package:drawer_animation/src/widgets/detail_body_widget.dart';
+import 'package:drawer_animation/src/widgets/Home/DetallesProducto/detail_body_widget.dart';
 import 'package:drawer_animation/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:drawer_animation/src/models/product_model.dart';

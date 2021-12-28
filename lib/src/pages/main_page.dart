@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:drawer_animation/src/widgets/menu_header_widget.dart';
-import 'package:drawer_animation/src/widgets/menu_items_widget.dart';
+import 'package:drawer_animation/src/widgets/Menu/menu_header_widget.dart';
+import 'package:drawer_animation/src/widgets/Menu/menu_items_widget.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
