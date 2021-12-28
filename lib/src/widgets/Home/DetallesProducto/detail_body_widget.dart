@@ -1,9 +1,9 @@
 import 'package:drawer_animation/src/models/product_model.dart';
-import 'package:drawer_animation/src/widgets/add_to_cart.dart';
-import 'package:drawer_animation/src/widgets/color_and_size.dart';
-import 'package:drawer_animation/src/widgets/counter_with_like_button.dart';
-import 'package:drawer_animation/src/widgets/description_widget.dart';
-import 'package:drawer_animation/src/widgets/product_tittle_with_image.dart';
+import 'package:drawer_animation/src/widgets/Home/DetallesProducto/add_to_cart.dart';
+import 'package:drawer_animation/src/widgets/Home/DetallesProducto/color_and_size.dart';
+import 'package:drawer_animation/src/widgets/Home/DetallesProducto/counter_with_like_button.dart';
+import 'package:drawer_animation/src/widgets/Home/DetallesProducto/description_widget.dart';
+import 'package:drawer_animation/src/widgets/Home/DetallesProducto/product_tittle_with_image.dart';
 import 'package:drawer_animation/utils/constants.dart';
 import 'package:flutter/material.dart';
 

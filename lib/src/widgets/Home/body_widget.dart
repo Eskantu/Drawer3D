@@ -1,5 +1,5 @@
 import 'package:drawer_animation/src/models/product_model.dart';
-import 'package:drawer_animation/src/widgets/item_card_widget.dart';
+import 'package:drawer_animation/src/widgets/Home/item_card_widget.dart';
 import 'package:drawer_animation/utils/constants.dart';
 import 'package:flutter/material.dart';
 

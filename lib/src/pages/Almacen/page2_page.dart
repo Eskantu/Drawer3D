@@ -59,9 +59,29 @@ class InventoryMenu extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  _buildCard(text: 'Productos', icon: Icons.inventory_2_sharp),
-                  _buildCard(text: 'Categorias', icon: Icons.category_sharp),
-                  _buildCard(text: 'Reportes', icon: Icons.summarize_sharp),
+                  _buildCard(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(
+                          'Almacen/Producto',
+                        );
+                      
+                      },
+                      text: 'Productos',
+                      icon: Icons.inventory_2_sharp),
+                  _buildCard(
+                      onTap: () {
+                        Navigator.of(context).pushNamed(
+                          'Almacen/Categorias',
+                        );
+                      },
+                      text: 'Categorias',
+                      icon: Icons.category_sharp),
+                  _buildCard(
+                      onTap: () {
+                        print('Reportes');
+                      },
+                      text: 'Reportes',
+                      icon: Icons.summarize_sharp),
                 ],
               ),
             ),
@@ -71,11 +91,12 @@ class InventoryMenu extends StatelessWidget {
     );
   }
 
-  _buildCard({required String text, required IconData icon}) {
+  _buildCard(
+      {required String text,
+      required IconData icon,
+      required VoidCallback onTap}) {
     return GestureDetector(
-      onTap: () {
-        // print('Card tapped');
-      },
+      onTap: onTap,
       child: Container(
         decoration: const BoxDecoration(
           color: Colors.white,

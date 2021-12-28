@@ -1,5 +1,5 @@
 import 'package:drawer_animation/src/models/product_model.dart';
-import 'package:drawer_animation/src/widgets/color_dot_widget.dart';
+import 'package:drawer_animation/src/widgets/Home/DetallesProducto/color_dot_widget.dart';
 import 'package:drawer_animation/utils/constants.dart';
 import 'package:flutter/material.dart';
 class ColorAndSize extends StatelessWidget {

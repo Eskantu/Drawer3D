@@ -1,4 +1,4 @@
-import 'package:drawer_animation/src/widgets/body_widget.dart';
+import 'package:drawer_animation/src/widgets/Home/body_widget.dart';
 import 'package:drawer_animation/utils/constants.dart';
 import 'package:flutter/material.dart';
 
