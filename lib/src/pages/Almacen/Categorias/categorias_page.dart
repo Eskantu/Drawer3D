@@ -4,6 +4,8 @@ import 'package:flutter_svg/svg.dart';
 
 class CategoriasPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
+
+   CategoriasPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,9 +14,9 @@ class CategoriasPage extends StatelessWidget {
         onPressed: () {
           _buildPopupButton(context);
         },
-        child: Icon(Icons.add),
+        child:const Icon(Icons.add),
       ),
-      body: CategoriasBody(),
+      body:const CategoriasBody(),
     );
   }
 
@@ -56,7 +58,7 @@ class CategoriasPage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: CircleAvatar(
+                    child:const CircleAvatar(
                       child: Icon(Icons.close),
                       backgroundColor: Colors.red,
                     ),
@@ -68,7 +70,7 @@ class CategoriasPage extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.all(8.0),
+                        padding:const EdgeInsets.all(8.0),
                         child: TextFormField(
                           decoration: const InputDecoration(
                             labelText: 'Nombre de categoria',
@@ -85,7 +87,7 @@ class CategoriasPage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: ElevatedButton(
-                          child: Text("Guardar"),
+                          child:const Text("Guardar"),
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
                               _formKey.currentState!.save();
@@ -104,6 +106,8 @@ class CategoriasPage extends StatelessWidget {
 }
 
 class CategoriasBody extends StatefulWidget {
+  const CategoriasBody({Key? key}) : super(key: key);
+
   @override
   State<CategoriasBody> createState() => _CategoriasBodyState();
 }
@@ -118,9 +122,9 @@ class _CategoriasBodyState extends State<CategoriasBody> {
           confirmDismiss: (direction) async {
             return false;
           },
-          onUpdate: (DismissUpdateDetails) {
+          onUpdate: (dismissUpdateDetails) {
             setState(() {
-              direction = DismissUpdateDetails.direction;
+              direction = dismissUpdateDetails.direction;
             });
           },
           key: Key(_categorias[i]),
@@ -137,7 +141,7 @@ class _CategoriasBodyState extends State<CategoriasBody> {
           },
           child: ListTile(
             title: Text(_categorias[i]),
-            leading: Icon(
+            leading:const Icon(
               Icons.category,
               color: KTextLightColor,
             ),
@@ -151,9 +155,9 @@ class _CategoriasBodyState extends State<CategoriasBody> {
         color: Colors.green,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
+          children:const <Widget>[
             Padding(
-              padding: const EdgeInsets.only(left: 16.0),
+              padding:  EdgeInsets.only(left: 16.0),
               child: Icon(
                 Icons.edit,
                 size: 40,
@@ -168,9 +172,9 @@ class _CategoriasBodyState extends State<CategoriasBody> {
         color: Colors.red,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
+          children:const <Widget>[
             Padding(
-              padding: const EdgeInsets.only(right: 16.0),
+              padding:  EdgeInsets.only(right: 16.0),
               child: Icon(
                 Icons.delete,
                 size: 40,
