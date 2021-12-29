@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.0.0
   step_progress_indicator: ^1.0.1
+  flutter_typeahead:
+  provider:
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,6 +1,15 @@
+import 'package:drawer_animation/src/Providers/Almacen/Productos/ui_productos_provider.dart';
+import 'package:drawer_animation/src/pages/Almacen/Productos/NuevoProductoPages/categoria_prducto_page.dart';
+import 'package:drawer_animation/src/pages/Almacen/Productos/NuevoProductoPages/informacion_general_page.dart';
+import 'package:drawer_animation/src/pages/Almacen/Productos/NuevoProductoPages/nuevo_producto_stepper.dart';
+import 'package:drawer_animation/src/pages/Almacen/Productos/NuevoProductoPages/precios_producto_page.dart';
+import 'package:drawer_animation/src/pages/Almacen/Productos/NuevoProductoPages/resumen_producto_page.dart';
+import 'package:drawer_animation/src/widgets/Almacen/Productos/fotter_widget.dart';
+import 'package:drawer_animation/src/widgets/Almacen/Productos/sub_header_widget.dart';
 import 'package:drawer_animation/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class ProductosPage extends StatelessWidget {
@@ -8,6 +17,7 @@ class ProductosPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _provider = Provider.of<ProductoProvier>(context);
     return Scaffold(
       appBar: _buildAppBar(context),
       body: Container(
@@ -18,12 +28,25 @@ class ProductosPage extends StatelessWidget {
             const SizedBox(height: KDefaultPadding),
             Expanded(
                 child: ListView(
-              children: [
-                _buildBody(context),
-              ],
+              children: const [NuevoProductoPage()],
             )),
             const SizedBox(height: KDefaultPadding),
-            const ProductFooter(),
+            ProductFooter(
+              onBack: () {
+                _provider.currentPage =_provider.currentPage-1;
+              },
+              onNext: () {
+                print(_provider.currentPage);
+                if (_provider.currentPage>=4) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Guardando producto...')));
+                _provider.currentPage =_provider.currentPage=1;
+                }
+                else{
+                  _provider.currentPage =_provider.currentPage+1;
+                }
+              },
+            ),
           ],
         ),
       ),
@@ -54,147 +77,6 @@ class ProductosPage extends StatelessWidget {
           onPressed: () {},
         ),
         const SizedBox(width: KDefaultPadding / 2),
-      ],
-    );
-  }
-
-  _buildBody(BuildContext context) {
-    return const InformacionGeneralProducto();
-  }
-}
-
-class InformacionGeneralProducto extends StatelessWidget {
-  const InformacionGeneralProducto({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: <Widget>[
-          ElevatedButton(
-              onPressed: () {}, child: const Icon(Icons.photo_camera)),
-          TextFormField(
-            decoration: const InputDecoration(
-              labelText: 'Nombre del producto',
-              border: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey),
-              ),
-              hintStyle: TextStyle(
-                color: Colors.grey,
-                fontSize: 16,
-              ),
-            ),
-          ),
-          const SizedBox(height: KDefaultPadding / 2),
-          TextFormField(
-            keyboardType: TextInputType.multiline,
-            maxLines: null,
-            decoration: const InputDecoration(
-              border: UnderlineInputBorder(
-                borderSide: BorderSide(color: Colors.grey),
-              ),
-              labelText: 'Descripción',
-              hintStyle: TextStyle(
-                color: Colors.grey,
-                fontSize: 16,
-              ),
-            ),
-          ),
-          const SizedBox(height: KDefaultPadding * 2),
-          Image.network(
-            'https://concepto.de/wp-content/uploads/2019/11/producto-packaging-e1572738514178.jpg',
-            // width: 100,
-            // height: 100,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class SubHeaderProduct extends StatelessWidget {
-  const SubHeaderProduct({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox(
-        width: 400,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CircularStepProgressIndicator(
-              totalSteps: 4,
-              currentStep: 2,
-              stepSize: 8,
-              selectedColor: const Color(0XFF73F238),
-              unselectedColor: Colors.grey[200],
-              padding: 0,
-              height: 110,
-              width: 110,
-              selectedStepSize: 8,
-              child: const Center(
-                  child: Text(
-                '2 de 4',
-                style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-              )),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  'Información general',
-                  style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                      color: KTextColor),
-                ),
-                Text(
-                  'Siguiente: precios',
-                  style: TextStyle(
-                      fontSize: 14.0,
-                      fontStyle: FontStyle.italic,
-                      color: KTextLightColor),
-                ),
-              ],
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ProductFooter extends StatelessWidget {
-  const ProductFooter({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        ElevatedButton(
-          onPressed: () {},
-          child: const Text(
-            'Regresar',
-            style: TextStyle(color: Color(0XFF3079D9)),
-          ),
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(
-              const Color(0XFFE2EBFA),
-            ),
-          ),
-        ),
-        ElevatedButton(
-          onPressed: () {},
-          child: const Text(
-            'Siguiente',
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-        ),
       ],
     );
   }

@@ -189,26 +189,22 @@ class _CategoriasBodyState extends State<CategoriasBody> {
 }
 
 List<String> _categorias = [
-  'Categoria 1',
-  'Categoria 2',
-  'Categoria 3',
-  'Categoria 4',
-  'Categoria 5',
-  'Categoria 6',
-  'Categoria 7',
-  'Categoria 8',
-  'Categoria 9',
-  'Categoria 10',
-  'Categoria 11',
-  'Categoria 12',
-  'Categoria 13',
-  'Categoria 14',
-  'Categoria 15',
-  'Categoria 16',
-  'Categoria 17',
-  'Categoria 18',
-  'Categoria 19',
-  'Categoria 20',
+  'Damas',
+  'Cocina',
+  'Electrodomesticos',  
+  'Muebles',
+  'Jardin',
+  'Cuidado Personal'
+      'Deportes',
+  'Moda',
+  'Hogar',
+  'Bebes',
+  'Libros',
+  'Mascotas',
+  'Juegos',
+  'Musica',
+  'Videojuegos',
+  'Otros'
 ];
 
 
